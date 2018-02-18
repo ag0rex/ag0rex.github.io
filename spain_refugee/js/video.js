@@ -5,7 +5,7 @@
 
  document.addEventListener("DOMContentLoaded", function() {
   hidden_ctx = createHiddenCanvas("hidden_canvas");
-//   video = document.createElement('video');
+  video = document.createElement('video');
 //   document.body.appendChild(video);
 
 //   video.autoplay = true;
@@ -13,9 +13,9 @@
 //   // video.muted = true;
 //   // video.setAttribute("id", "gum-local");
 //   // //video.setAttribute("style", "display:none;");
-//   // video.width = 160;
-//   // video.height = 120;
-//   // video.zIndex = 999;
+  video.width = 160;
+  video.height = 120;
+  video.zIndex = 999;
 
 //   // 'use strict';
 //   //var videoSelect = document.querySelector('select#videoSource');
