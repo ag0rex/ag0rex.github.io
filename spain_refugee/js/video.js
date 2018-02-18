@@ -68,43 +68,45 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // List cameras and microphones.
-  var cams = [];
-  navigator.mediaDevices.enumerateDevices(constraints)
-    .then(function(devices) {
-      var msg = "";
-      var option = document.createElement('option');
-      devices.forEach(function(device) {
-        if (device.kind == "videoinput") {
-          console.log(device);
-          msg += device.label+ "<br>"
-          // msg += device.kind + ": " + device.label+ "<br>"
-            //+ " id = " + device.deviceId + "<br><br>";
-            cams.push(device);
-            // option.text = device.label || 'camera ' + (videoSelect.length + 1);
-            // option.id = device.deviceId;
-            // videoSelect.appendChild(option);
-        }
-      });
-      errorElement.innerHTML += '<p>' + msg + '</p>';
-      var videoSource = cams[cams.length-1].deviceId;
-      //console.log(videoSelect.id);
-      //var videoSource = videoSelect.value;
-      constraints = {
-        audio: false,
-        // video: true,
-        // advanced: [{
-        //   facingMode: "environment"
-        // }]
-        video: true// {deviceId: videoSource ? {exact: videoSource} : undefined}
-      };
+  // var cams = [];
+  // navigator.mediaDevices.enumerateDevices(constraints)
+  //   .then(function(devices) {
+  //     var msg = "";
+  //     var option = document.createElement('option');
+  //     devices.forEach(function(device) {
+  //       if (device.kind == "videoinput") {
+  //         console.log(device);
+  //         msg += device.label+ "<br>"
+  //         // msg += device.kind + ": " + device.label+ "<br>"
+  //           //+ " id = " + device.deviceId + "<br><br>";
+  //           cams.push(device);
+  //           // option.text = device.label || 'camera ' + (videoSelect.length + 1);
+  //           // option.id = device.deviceId;
+  //           // videoSelect.appendChild(option);
+  //       }
+  //     });
+  //     errorElement.innerHTML += '<p>' + msg + '</p>';
+  //     var videoSource = cams[cams.length-1].deviceId;
+  //     //console.log(videoSelect.id);
+  //     //var videoSource = videoSelect.value;
+  //     constraints = {
+  //       audio: false,
+  //       // video: true,
+  //       // advanced: [{
+  //       //   facingMode: "environment"
+  //       // }]
+  //       video: true// {deviceId: videoSource ? {exact: videoSource} : undefined}
+  //     };
 
-      navigator.mediaDevices.getUserMedia(constraints).
-      then(handleSuccess).catch(handleError);
-    })
-    .catch(function(err) {
-      console.log(err.name + ": " + err.message);
-    });
+  //     navigator.mediaDevices.getUserMedia(constraints).
+  //     then(handleSuccess).catch(handleError);
+  //   })
+  //   .catch(function(err) {
+  //     console.log(err.name + ": " + err.message);
+  //   });
 
+    navigator.mediaDevices.getUserMedia(constraints).
+        then(handleSuccess).catch(handleError);
 
 
 
