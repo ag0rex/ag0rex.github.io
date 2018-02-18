@@ -40,7 +40,7 @@
 
 
 
-var ctx = createHiddenCanvas("canvas");
+var ctx = createCanvas("canvas");
 
 var engine = new particleEngine(20, 20);
 var grid = new Grid(2, 20);
@@ -77,15 +77,16 @@ function reset(){
 
 
 function draw(){
-  // ctx.background(245);
+    ctx.background(245);
+    ctx.drawImage(video, 0, 0)
   // drawParticles();
-  // if(chance(100)) {
-  //   reset();
-  // }
-  // videoshit();
+  if(chance(100)) {
+    reset();
+  }
+  videoshit();
 
 
-  // if(frameCount%5 == 0) playSong();
+  if(frameCount%5 == 0) playSong();
 }
 
 

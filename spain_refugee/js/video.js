@@ -3,8 +3,8 @@
 // var showBgImg = false;
 // var showVideo = false;
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   hidden_ctx = createHiddenCanvas("hidden_canvas");
+ document.addEventListener("DOMContentLoaded", function() {
+  hidden_ctx = createHiddenCanvas("hidden_canvas");
 //   video = document.createElement('video');
 //   document.body.appendChild(video);
 
@@ -110,34 +110,34 @@
 
 
 
-// })
+ })
 
 
-// function videoshit() {
+function videoshit() {
 
-//   hidden_ctx.drawImage(video, 0, 0, w, h);
-//   sample = hidden_ctx.getImageData(0, 0, w, h);
+  hidden_ctx.drawImage(video, 0, 0, w, h);
+  sample = hidden_ctx.getImageData(0, 0, w, h);
 
-//   ctx.fillStyle = rgba(255, 0.3);
+  ctx.fillStyle = rgba(255, 0.3);
 
-//   for (var i = 0; i < engine.particles.length; i++) {
-//     var p = engine.particles[i];
+  for (var i = 0; i < engine.particles.length; i++) {
+    var p = engine.particles[i];
 
-//     var pos = Math.round(Math.round(p.pos.x) + Math.round(p.pos.y) * w) * 4;
-//     var r = sample.data[pos];
-//     var g = sample.data[pos + 1];
-//     var b = sample.data[pos + 2];
-//     p.c = rgb(r, g, b);
-//     p.col = {
-//       r: r,
-//       g: g,
-//       b: b
-//     }
-//     p.bright = brightness(r, g, b, 0, 100);
-//     //chanceLog(p.target.z);
+    var pos = Math.round(Math.round(p.pos.x) + Math.round(p.pos.y) * w) * 4;
+    var r = sample.data[pos];
+    var g = sample.data[pos + 1];
+    var b = sample.data[pos + 2];
+    p.c = rgb(r, g, b);
+    p.col = {
+      r: r,
+      g: g,
+      b: b
+    }
+    p.bright = brightness(r, g, b, 0, 100);
+    //chanceLog(p.target.z);
 
-//   }
-// }
+  }
+}
 
 
 
