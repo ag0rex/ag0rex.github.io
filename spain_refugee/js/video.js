@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // advanced: [{
         //   facingMode: "environment"
         // }]
-        video: {deviceId: videoSource ? {exact: videoSource} : undefined}
+        video: true// {deviceId: videoSource ? {exact: videoSource} : undefined}
       };
 
       navigator.mediaDevices.getUserMedia(constraints).
