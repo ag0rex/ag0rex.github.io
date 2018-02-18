@@ -40,7 +40,7 @@
 
 
 
-// var ctx = createCanvas("canvas1");
+var ctx = createHiddenCanvas("canvas");
 
 var engine = new particleEngine(20, 20);
 var grid = new Grid(2, 20);
@@ -160,12 +160,13 @@ function playSong(){
 }
 
 
-
-
 </script>
 <!-- <div class="select">
   <label for="videoSource">Video source: </label><select id="videoSource"></select>
-</div> -->
+    </div> -->
+
+    <video autoplay playsinline></video>
+
 <script src="js/video.js"></script>
 </body>
 </html>
