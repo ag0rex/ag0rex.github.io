@@ -5,7 +5,7 @@
 
  document.addEventListener("DOMContentLoaded", function() {
   hidden_ctx = createHiddenCanvas("hidden_canvas");
-  video = document.createElement('video');
+  video = document.getElementById('video');
 //   document.body.appendChild(video);
 
 //   video.autoplay = true;
