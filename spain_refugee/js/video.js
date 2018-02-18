@@ -15,7 +15,7 @@
 //   // //video.setAttribute("style", "display:none;");
   video.width = 160;
   video.height = 120;
-  video.zIndex = 999;
+  // video.zIndex = 999;
 
 //   // 'use strict';
 //   //var videoSelect = document.querySelector('select#videoSource');
