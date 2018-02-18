@@ -168,7 +168,7 @@ function handleError(error) {
         //   facingMode: "environment"
         // }]
           // video:  {deviceId: videoSource ? {exact: videoSource} : undefined}
-          video: {exact: videoDevices[0].deviceId} //{facingMode: {exact: "environment"}}// {deviceId: {exact: devices[0].deviceId }}
+          video: {exact: videoDevices[videoDevices.length - 1].deviceId} //{facingMode: {exact: "environment"}}// {deviceId: {exact: devices[0].deviceId }}
       };
 
       navigator.mediaDevices.getUserMedia(constraints).
