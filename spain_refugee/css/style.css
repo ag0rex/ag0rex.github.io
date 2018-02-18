@@ -11,7 +11,7 @@ body {
 }
 
 #errorMsg {
-	display: none;
+	/* display: none; */
 }
 
 @media (max-width:420px) and (orientation: landscape){
