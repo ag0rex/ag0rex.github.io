@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.appendChild(video);
 
   video.autoplay = true;
-  video.loop = true;
-  video.muted = true;
-  video.setAttribute("id", "gum-local");
-  //video.setAttribute("style", "display:none;");
-  video.width = 160;
-  video.height = 120;
-  video.zIndex = 999;
+  // video.loop = true;
+  // video.muted = true;
+  // video.setAttribute("id", "gum-local");
+  // //video.setAttribute("style", "display:none;");
+  // video.width = 160;
+  // video.height = 120;
+  // video.zIndex = 999;
 
   // 'use strict';
   //var videoSelect = document.querySelector('select#videoSource');
